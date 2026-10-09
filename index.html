@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My First GitHub Pages App</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, sans-serif; background: #f1f5f9; color: #1e293b; line-height: 1.6; }
+    main { max-width: 760px; margin: 64px auto; padding: 0 24px; }
+    .card { background: white; border: 1px solid #e2e8f0; border-radius: 20px; padding: clamp(24px, 5vw, 48px); box-shadow: 0 12px 36px #0f172a0a; }
+    .badge { color: #2563eb; font-weight: 700; font-size: 14px; }
+    h1 { line-height: 1.15; font-size: clamp(32px, 6vw, 48px); margin: 16px 0; }
+    h2 { font-size: 22px; margin-top: 32px; }
+    p { color: #475569; }
+    button { border: 0; border-radius: 10px; padding: 12px 20px; font: inherit; font-weight: 600; cursor: pointer; background: #2563eb; color: white; }
+    button:hover { background: #1d4ed8; }
+    button:focus-visible { outline: 3px solid #0f172a; outline-offset: 4px; }
+    .secondary { background: #e2e8f0; color: #1e293b; margin-left: 8px; }
+    .secondary:hover { background: #cbd5e1; }
+    code { background: #f1f5f9; border-radius: 4px; padding: 2px 6px; }
+    footer { margin-top: 24px; text-align: center; font-size: 14px; color: #64748b; }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="card" aria-labelledby="welcome">
+      <span class="badge">MY FIRST WEB APP</span>
+      <h1 id="welcome">Hello, GitHub Pages!</h1>
+      <p>Welcome to Shahaji's first website. This page is the starting point for learning how to build and publish a web app.</p>
+      <h2>Try a little JavaScript</h2>
+      <p>Click the button to update the counter without reloading the page.</p>
+      <p aria-live="polite" aria-atomic="true">Button clicks: <strong id="count">0</strong></p>
+      <button id="increment" type="button">Click me</button>
+      <button id="reset" class="secondary" type="button">Reset</button>
+      <h2>How this page works</h2>
+      <ul>
+        <li><strong>HTML</strong> defines the content and structure.</li>
+        <li><strong>CSS</strong> controls the colors, spacing, and layout.</li>
+        <li><strong>JavaScript</strong> makes the counter interactive.</li>
+      </ul>
+      <p>To experiment, edit <code>index.html</code> in the <code>main</code> branch and commit your changes.</p>
+    </section>
+    <footer>Built with HTML, CSS, and JavaScript.</footer>
+  </main>
+  <script>
+    let clicks = 0;
+    const count = document.getElementById('count');
+    document.getElementById('increment').addEventListener('click', () => {
+      clicks += 1;
+      count.textContent = clicks;
+    });
+    document.getElementById('reset').addEventListener('click', () => {
+      clicks = 0;
+      count.textContent = clicks;
+    });
+  </script>
+</body>
+</html>
+
